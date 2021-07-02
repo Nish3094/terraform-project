@@ -1,8 +1,13 @@
+locals {
+tags_list {
+ name = "Devops Team"
+ Environment = "Dev"
+}
+}
+
 resource "aws_instance" "aws_ec2_instance_terraform" {
   ami           = "ami-0ba62214afa52bec7"
   instance_type = "t2.micro"
 
-  tags = {
-    name = "Example Instance for terraform"
-  }
+  tags = locals.tags_list
 }
