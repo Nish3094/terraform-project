@@ -6,7 +6,7 @@ tags_list {
 }
 
 resource "aws_instance" "aws_ec2_instance_terraform" {
-  ami           = "ami-0ba62214afa52bec7"
+  ami           = "ami-830c94e3"
   instance_type = "t2.micro"
 
   tags = locals.tags_list
