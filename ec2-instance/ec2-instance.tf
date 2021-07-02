@@ -1,7 +1,7 @@
 locals {
-tags_list {
- name = "Devops Team"
- Environment = "Dev"
+tags_list = {
+  name = "Devops Team"
+  Environment = "Dev"
 }
 }
 
