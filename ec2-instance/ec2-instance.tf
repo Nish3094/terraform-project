@@ -5,8 +5,18 @@ tags_list = {
 }
 }
 
+data "aws_ami" "aminame" {
+  most_recent = "true"
+  owners = ["amazon"]
+
+  filter {
+    name = "name"
+    values = ["amzn2-ami-hvm*"]
+  }
+}
+
 resource "aws_instance" "myec2" {
-  ami           = "ami-830c94e3"
+  ami           = data.aws_ami.aminame.id
   instance_type = "t2.micro"
   tags = local.tags_list
 }
