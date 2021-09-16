@@ -1,0 +1,9 @@
+  [{
+  	"username": "Mike",
+  	"code": "12345",
+  	"city": "NYC"
+  }, {
+  	"username": "Kelly",
+  	"code": "56789",
+  	"city": "NYC"
+  }]
